@@ -195,19 +195,40 @@
             <!-- TODO: Replace with your paper title -->
             <h1 class="title is-1 publication-title">Beyond Multiple Choice: Verifiable OpenQA for Robust Vision-Language RFT</h1>
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a>BAAI FlagEval Team</a></span>
-                  </span>
-                  </div>
+  <span class="author-block"><a href="#">Yesheng Liu</a><sup>1,2,3</sup></span>
+  <span class="author-block"><a href="#">Hao Li</a><sup>3,4</sup></span>
+  <span class="author-block"><a href="#">Haiyu Xu</a><sup>3,5</sup></span>
+  <span class="author-block"><a href="#">Baoqi Pei</a><sup>6</sup></span>
+  <span class="author-block"><a href="#">Jiahao Wang</a><sup>1,2,3</sup></span>
+  <span class="author-block"><a href="#">Mingxuan Zhao</a><sup>3,5</sup></span>
+  <span class="author-block"><a href="#">Jing-Shu Zheng</a><sup>3</sup></span>
+  <span class="author-block"><a href="#">Zheqi He</a><sup>3</sup></span>
+  <span class="author-block"><a href="#">JG Yao</a><sup>3</sup></span>
+  <span class="author-block"><a href="#">Bowen Qin</a><sup>3</sup></span>
+  <span class="author-block"><a href="#">Xi Yang</a><sup>3</sup></span>
+  <span class="author-block"><a href="#">Jiajun Zhang</a><sup>3</sup></span>
+</div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">2025.11</span>
-                  </div>
-
+<div class="is-size-6 has-text-centered mt-2">
+  <span><sup>1</sup> Institute of Automation, CAS</span> &nbsp;
+  <span><sup>2</sup> School of Artificial Intelligence, UCAS</span> &nbsp;
+  <span><sup>3</sup> BAAI FlagEval Team</span> &nbsp;
+  <span><sup>4</sup> BUAA</span> &nbsp;
+  <span><sup>5</sup> PKU</span> &nbsp;
+  <span><sup>6</sup> ZJU</span> &nbsp;
+</div>
                   <div class="column has-text-centered">
                     <div class="publication-links">
+                    <span class="link-block">
+                      <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>abs</span>
+                </a>
+              </span>
+                    
                     <!-- TODO: Add your supplementary material PDF or remove this section -->
                     <span class="link-block">
                       <a href="static/pdfs/MCQ_vs_open.pdf" target="_blank"
@@ -237,21 +258,18 @@
                    <span class="icon">
   <img src="static/images/hf-logo.svg" alt="Hugging Face" width="25" height="25">
 </span>
-                  <span>ReVeL datasets</span>
+                  <span>ReVeL Datasets</span>
                 </a>
               </span>
-
-<!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
+              <span class="link-block">
                   <a href="https://huggingface.co/datasets/zhizhou57/ReVeL-benchmarks" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <img src="static/images/hf-logo.svg" alt="Hugging Face" width="25" height="25">
-                  </span>
-                  <span>ReVeL benchmarks</span>
+                   <span class="icon">
+  <img src="static/images/hf-logo.svg" alt="Hugging Face" width="25" height="25">
+</span>
+                  <span>ReVeL Benchmarks</span>
                 </a>
               </span>
-              
             </div>
           </div>
         </div>
@@ -263,11 +281,14 @@
 <!-- Single image section -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <div class="has-text-centered">
-        <img src="static/images/rewrite_pipeline_01.png" alt="ReVeL framework overview" loading="lazy" class="px-8"/>
-        <h2 class="subtitle has-text-centered mt-4">
-        We introduce ReVeL, a framework that rewrites MCQA into open ended yet verifiable formats while ensuring semantic fidelity and minimizing information loss. ReVeL operates in three phases: Triage and Classification, Prompt-based Rewriting, and Hybrid Evaluation and Verification.
+        <img src="static/images/Main_Figure.jpg" alt="ReVeL framework overview"
+             loading="lazy"
+             style="max-width: 100%; height: auto; display: inline-block;"/>
+        <h2 class="is-size-6 has-text-centered mt-3">
+        Illustration of MCQA fragility. The example (left) shows an unfaithful reasoning chain that eliminates distractors incorrectly yet provide a correct final answer, yielding a positive reward signal that, when used in reinforcement learning, further amplifies shortcut
+behavior (top right). This shortcut behavior leads to widening gap between MCQA and OpenQA. The diagram motivate us to propose ReVeL, which aligns evaluation and training with reliable OpenQA.
         </h2>
       </div>
     </div>
@@ -320,27 +341,7 @@ However, we find that the options may leak exploitable signals, which makes the 
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">ReVeL examples</h2>
-        <div class="content has-text-justified is-medium">
-          <p>
-            Examples of our ReVeL Pipeline applied to different question types. Each quadrant displays an original multiple-choice questionand its OpenQA counterpart.
-          </p>
-
-          <div class="has-text-centered my-5">
-            <img src="static/images/REVEL_examples.jpg" alt="Revel examples" style="max-height: 700px;" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Part 3 -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Performance on rewritten training data</h2>
+        <h2 class="title is-3">Datasets rewritten by ReVeL improves both MCQ and Open performance</h2>
         <div class="content has-text-justified is-medium">
           <p>
             Open ended accuracy improves on every benchmarks while MCQA scores remain competitive. Models trained with ReVeL data achieves a higher overall score. These results indicate that verifiable OpenQA align better with transferable reasoning and real-world usage, improving both open-ended performance and the combined overall metric. 
@@ -367,7 +368,7 @@ However, we find that the options may leak exploitable signals, which makes the 
       </div>
       <pre id="bibtex-code"><code>@article{Liu2025OpenQA,
   title={Beyond Multiple Choice: Verifiable OpenQA for Robust Vision-Language RFT},
-  author={Yesheng Liu and Hao Li and Haiyu Xu and Baoqi Pei and Jiahao Wang and Mingxuan Zhao and Jing-Shu Zheng and Zheqi He and Jin-Ge Yao and Xi Yang and Bowen Qin and Jiajun Zhang },
+  author={Yesheng Liu and Hao Li and Haiyu Xu and Baoqi Pei and Jiahao Wang and Mingxuan Zhao and Jing-Shu Zheng and Zheqi He and Jin-Ge Yao and Bowen Qin and Xi Yang and Jiajun Zhang},
   year={2025}
 }</code></pre>
     </div>
